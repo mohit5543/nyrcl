@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Recreational Cricket League</title>
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Custom fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!--leaflets map-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+
+</head>
+<body>
+
+    <!-- Navbar starts here -->
+    <div class="nav-container">
+        <div class="nav-row">
+            <div class="nav-logo">
+                <a href="#">
+                    
+                </a>
+            </div>
+            <div class="nav-controls">
+                <a href="#about">About</a>
+                <a href="#join">Join</a>
+                <a href="#fees">Fees</a>
+                <a href="#location">Location</a>
+                <a href="#schedule">Schedule</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with background video -->
+    <header class="first-container">
+        <video width="100%" height="100%" autoplay muted id="background-video">
+            <source src="https://dl.dropboxusercontent.com/scl/fi/bphzdnxt5cixtg1ozpejw/5960520_cricket_still_life_cricket_ball_h8c0ebe0d23100901Cricket4k028.mp4?rlkey=m912wxgq2yfw67f7bjf4waqo5&st=3c459bh5" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1>Welcome to the New York Recreational Cricket League</h1>
+            <p>Join us to experience the thrill of cricket right in the heart of New York City!</p>
+            <button id="join-now-btn">Join Now</button>
+        </div>
+    </header>
+
+    <!-- About section -->
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About the League</h2>
+                <p>The New York Recreational Cricket League (NYRCL) is dedicated to promoting the sport of cricket among New Yorkers of all ages. We offer a friendly but competitive environment where players can improve their skills and enjoy the game.</p>
+            </div>
+            <div class="about-video">
+                <video width="100%" height="100px" autoplay muted loop>
+                    <source src="https://dl.dropboxusercontent.com/scl/fi/aa8anhe8aa8484cz5ls1l/aerial-drone-video-zoom-out-in-central-park-manhattan-ny.mp4?rlkey=7174vpmsr0c7q86pwgqb8ecv8&st=gmsrq9kw" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Join Now section -->
+<section id="join">
+    <h2>How to Join</h2>
+    <div class="join-container">
+        <!-- Form section -->
+        <div class="form-container">
+            <h3>Join the League</h3>
+            <form id="join-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="occupation">Occupation:</label>
+                    <select id="occupation" name="occupation" required>
+                        <option value="salaried">Salaried</option>
+                        <option value="retired">Retired</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <!-- Text and Testimonials -->
+        <div class="text-container">
+            <p>Interested in playing? We welcome players of all skill levels! To join, simply fill out our online registration form on the left or contact us at join@nyrcl.com for more details.</p>
+            
+            <!-- Testimonials section -->
+            <div class="testimonials-slider">
+                <button class="prev">❮</button>
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <p>"Joining the NYRCL was the best decision I made this year. The community is welcoming and the games are incredibly fun!"</p>
+                        <cite>— Alex R., Member</cite>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Great way to stay active and meet new people. The league is well-organized, and the games are always exciting!"</p>
+                        <cite>— Jamie L., Member</cite>
+                    </div>
+                    <!-- Add more testimonials here if needed -->
+                </div>
+                <button class="next">❯</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Fees section -->
+    <section id="fees">
+        <div class="bg-color">
+            <h2>League Fees</h2>
+            <p>The registration fee for the league is $150 per player, which covers the entire season. This fee includes uniforms, equipment rental, and insurance.</p>
+        
+            <!-- Perks cards -->
+            <div class="fees-cards">
+                <div class="fees-card">
+                    <span class="material-symbols-outlined">styler</span>
+                    <h3>Uniform Included</h3>
+                    <p>Receive a complete cricket uniform as part of your registration. Our high-quality uniforms are designed to keep you comfortable and agile on the field, ensuring you look and feel like a professional player during every game.</p>
+                </div>
+                <div class="fees-card">
+                    <span class="material-symbols-outlined">sports_cricket</span>
+                    <h3>Equipment Rental</h3>
+                    <p>Don’t worry about bringing your own gear! Our league provides top-of-the-line cricket equipment rental for all players. From bats to pads, everything you need to play is included, allowing you to focus on your performance and enjoyment.</p>
+                </div>
+                <div class="fees-card">
+                    <span class="material-symbols-outlined">payments</span>
+                    <h3>Insurance Included</h3>
+                    <p>Play with peace of mind. Our comprehensive insurance coverage protects you against injuries and accidents during games and practice sessions. We've got you covered so you can concentrate on playing your best cricket without any worries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Location Section -->
+    <section id="location">
+        <h2>Location of Games</h2>
+        <p>All games are held at the iconic Central Park Cricket Fields, located near the north end of Central Park, easily accessible via public transportation.</p>
+        <div id="map" class="map-container"></div>
+        <div class="directions-buttons">
+            <button id="walking-directions">Walking</button>
+            <button id="driving-directions">Driving</button>
+            <button id="public-transport-directions">Public Transport</button>
+        </div>
+    </section>
+
+    <!-- Schedule section -->
+    <section id="schedule">
+        <div class="bg-schedule">
+            <h2>Season Schedule</h2>
+            <p>The NYRCL season runs from April through September, with games typically held on weekends. Here is the schedule for the upcoming season:</p>
+            <ul class="schedule-list">
+                <li class="schedule-item">
+                    <span class="date-icon">📅</span>
+                    <span class="date-text">Opening Day: April 15th</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="date-icon">🏆</span>
+                    <span class="date-text">Mid-Season Tournament: July 8th-9th</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="date-icon">🏅</span>
+                    <span class="date-text">Season Finals: September 20th</span>
+                </li>
+                <li class="schedule-item">
+                    <span class="date-icon">🎉</span>
+                    <span class="date-text">Closing Ceremony: September 30th</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Contact Us: </p>
+        <p>Email: info@nyrcl.com | Phone: (555) 123-4567</p>
+        <p>Follow us on our social media pages for updates and more information.</p>
+    </footer>
+
+    <!--up arrow button-->
+    <button id="scroll-to-top-btn" title="Go to top">↑</button>
+
+    <!-- Custom JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
