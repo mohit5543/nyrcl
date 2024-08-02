@@ -22,8 +22,63 @@ html, body {
     font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     margin: 0;
-    
+    cursor: url('./cursor.gif'), auto;
 }
+
+/* Loader styles */
+.loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+/* Ball styles */
+.ball {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Progress circle styles */
+.progress-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-circle-bg {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 10;
+}
+
+.progress-circle-fg {
+    fill: none;
+    stroke: #3498db;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 3s linear;
+}
+
 
 /* Navbar starts here */
 
