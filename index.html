@@ -12,10 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     
-    <!--leaflets map-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <!--Google Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -24,6 +22,19 @@
 
 </head>
 <body>
+    <div id="loader" class="loader">
+        <div class="ball-container">
+            <img src="./Cricket ball.gif" alt="Loading" class="ball">
+            <svg class="progress-circle" width="100" height="100">
+                <circle class="progress-circle-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="progress-circle-fg" cx="50" cy="50" r="45"></circle>
+            </svg>
+        </div>
+    </div>
+    <div id="content" style="display:none;">
+    <!-- Your website content goes here -->
+    
+
 
     <!-- Navbar starts here -->
     <div class="nav-container">
@@ -212,11 +223,14 @@
         <p>Contact Us: </p>
         <p>Email: info@nyrcl.com | Phone: (555) 123-4567</p>
         <p>Follow us on our social media pages for updates and more information.</p>
-        <p>Videos : Stock footage provided by Beachfront, downloaded from <a href="https://www.videvo.net/video/cricket-still-life-with-close-up-of-bails-resting-on-ball-in-grass-behind-stumps/5960094/#rs=video-box">www.videvo.net</a></p>
     </footer>
+    </div>
 
     <!--up arrow button-->
     <button id="scroll-to-top-btn" title="Go to top">↑</button>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
