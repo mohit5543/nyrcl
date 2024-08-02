@@ -71,7 +71,7 @@ html, body {
 
 .progress-circle-fg {
     fill: none;
-    stroke: #3498db;
+    stroke: var(--primary-color);
     stroke-width: 10;
     stroke-linecap: round;
     stroke-dasharray: 283;
