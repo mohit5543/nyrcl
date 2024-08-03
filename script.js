@@ -89,3 +89,9 @@ $(window).on('load', function() {
         window.open('https://www.google.com/maps/dir/?api=1&destination=40.785091,-73.968285&travelmode=transit', '_blank');
     });
 });
+
+// join now
+document.getElementById("join-now-btn").addEventListener("click", function() {
+    document.getElementById("join").scrollIntoView({ behavior: "smooth" });
+});
+
